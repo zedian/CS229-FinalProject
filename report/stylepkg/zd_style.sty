@@ -1,0 +1,246 @@
+\ProvidesPackage{stylepkg/zd_style}
+
+%% Environment Frames
+\ifzediframed
+    \RequirePackage{thmtools}
+    \RequirePackage[framemethod = TikZ]{mdframed}
+    
+    \mdfdefinestyle{mdblackrec}{
+        nobreak=true,
+        skipabove=12pt,
+        innertopmargin=12pt,
+        innerbottommargin=8pt,
+        innerleftmargin=9pt,
+        leftmargin=30pt,
+        rightmargin=30pt,
+        skipbelow=4pt,
+        leftline=true,
+        rightline=true,
+        topline=true,
+        bottomline=true,
+        linewidth=1pt,
+        linecolor=Black,
+        usetwoside=false
+    }
+    \declaretheoremstyle[
+        headfont=\bfseries,
+        headindent={150pt},
+        mdframed={style=mdblackrec},
+        headpunct={\\[2pt]},
+        postheadspace={0pt}
+    ]{thesisblackbox}
+    
+    \mdfdefinestyle{mdblackbox}{
+        nobreak=true,
+        skipabove=12pt,
+        innertopmargin=12pt,
+        innerbottommargin=8pt,
+        innerleftmargin=25pt,
+        skipbelow=4pt,
+        leftline=false,
+        rightline=false,
+        topline=true,
+        bottomline=true,
+        linewidth=3pt,
+        linecolor=Black,
+    }
+    \declaretheoremstyle[
+        headfont=\bfseries,
+        headindent={-15pt},
+        mdframed={style=mdblackbox},
+        headpunct={\\[2pt]},
+        postheadspace={0pt}
+    ]{thmblackbox}
+
+    \mdfdefinestyle{mdwhitebox}{
+        nobreak=true,
+        skipabove=12pt,
+        innertopmargin=12pt,
+        innerbottommargin=8pt,
+        innerleftmargin=25pt,
+        skipbelow=4pt,
+        leftline=false,
+        rightline=false,
+        topline=true,
+        bottomline=true,
+        linewidth=2pt,
+        linecolor=White,
+        backgroundcolor=Black,
+    }
+    \declaretheoremstyle[
+        headfont=\bfseries\color{White},
+        headindent={-15pt},
+        bodyfont=\color{White},
+        mdframed={style=mdwhitebox},
+        headpunct={\\[2pt]},
+        postheadspace={0pt}
+    ]{thmwhitebox}
+
+    \mdfdefinestyle{mdbluebox}{
+        nobreak=true,
+        skipabove=12pt,
+        innertopmargin=12pt,
+        innerbottommargin=8pt,
+        innerleftmargin=25pt,
+        skipbelow=4pt,
+        leftline=false,
+        rightline=false,
+        topline=true,
+        bottomline=true,
+        linewidth=3pt,
+        linecolor=MidnightBlue,
+        backgroundcolor=TealBlue!5,
+    }
+    \declaretheoremstyle[
+        headfont=\sffamily\bfseries\color{MidnightBlue},
+        headindent={-15pt},
+        mdframed={style=mdbluebox},
+        headpunct={\\[2pt]},
+        postheadspace={0pt}
+    ]{thmbluebox}
+
+    \mdfdefinestyle{mdredbox}{
+        nobreak=true,
+        skipabove=12pt,
+        innertopmargin=12pt,
+        innerbottommargin=8pt,
+        innerleftmargin=25pt,
+        skipbelow=4pt,
+        leftline=false,
+        rightline=false,
+        topline=true,
+        bottomline=true,
+        linewidth=3pt,
+        linecolor=BrickRed,
+        backgroundcolor=Thistle!5,
+    }
+    \declaretheoremstyle[
+        headfont=\sffamily\bfseries\color{BrickRed},
+        headindent={-15pt},
+        mdframed={style=mdredbox},
+        headpunct={\\[2pt]},
+        postheadspace={0pt}
+    ]{thmredbox}
+
+    \mdfdefinestyle{mdbluelinebox}{
+        nobreak=true,
+        skipabove=12pt,
+        innertopmargin=12pt,
+        innerbottommargin=8pt,
+        innerleftmargin=25pt,
+        skipbelow=4pt,
+        leftline=true,
+        rightline=false,
+        topline=false,
+        bottomline=false,
+        linewidth=10pt,
+        linecolor=TealBlue,
+        backgroundcolor=Black,
+    }
+    \declaretheoremstyle[
+        headfont=\sffamily\bfseries\color{TealBlue},
+        headindent={-15pt},
+        bodyfont=\color{White},
+        mdframed={style=mdbluelinebox},
+        headpunct={\\[2pt]},
+        postheadspace={0pt}
+    ]{thmbluelinebox}
+
+    \mdfdefinestyle{mdredlinebox}{
+        nobreak=true,
+        skipabove=12pt,
+        innertopmargin=12pt,
+        innerbottommargin=8pt,
+        innerleftmargin=25pt,
+        skipbelow=4pt,
+        leftline=true,
+        rightline=false,
+        topline=false,
+        bottomline=false,
+        linewidth=10pt,
+        linecolor=RubineRed,
+        backgroundcolor=Black,
+    }
+    \declaretheoremstyle[
+        headfont=\sffamily\bfseries\color{RubineRed},
+        headindent={-15pt},
+        bodyfont=\color{White},
+        mdframed={style=mdredlinebox},
+        headpunct={\\[2pt]},
+        postheadspace={0pt}
+    ]{thmredlinebox}
+
+    \mdfdefinestyle{mdwhitelinebox}{
+        nobreak=true,
+        skipabove=12pt,
+        innertopmargin=12pt,
+        innerbottommargin=8pt,
+        innerleftmargin=25pt,
+        skipbelow=4pt,
+        leftline=true,
+        rightline=false,
+        topline=false,
+        bottomline=false,
+        linewidth=10pt,
+        linecolor=White,
+        backgroundcolor=Black,
+    }
+    \declaretheoremstyle[
+        headfont=\bfseries\color{White},
+        headindent={-15pt},
+        bodyfont=\color{White},
+        mdframed={style=mdwhitelinebox},
+        headpunct={\\[2pt]},
+        postheadspace={0pt}
+    ]{thmwhitelinebox}
+
+    \mdfdefinestyle{mdblacklinebox}{
+        nobreak=tsrue,
+        skipabove=12pt,
+        innertopmargin=12pt,
+        innerbottommargin=8pt,
+        innerleftmargin=25pt,
+        skipbelow=4pt,
+        leftline=true,
+        rightline=false,
+        topline=false,
+        bottomline=false,
+        linewidth=10pt,
+        linecolor=Black,
+    }
+    \declaretheoremstyle[
+        headfont=\bfseries,
+        headindent={-15pt},
+        mdframed={style=mdblacklinebox},
+        headpunct={\\[2pt]},
+        postheadspace={0pt}
+    ]{thmblacklinebox}
+
+    \ifzediblack
+        \declaretheorem[style=thmbluelinebox, name=Theorem]{theorem}
+        \declaretheorem[style=thmbluelinebox, name=Corollary, sibling=theorem]{corollary}
+        \declaretheorem[style=thmbluelinebox, name=Proposition, sibling=theorem]{proposition}
+        \declaretheorem[style=thmredlinebox, name=Example, sibling=theorem]{example}
+
+        \declaretheorem[style=thmwhitelinebox, name=Lemma, sibling=theorem]{lemma}
+        \declaretheorem[style=thmwhitebox, name=Problem, sibling=theorem]{problem}
+        % \declaretheorem[style=thmwhitelinebox, name=Remark, sibling=theorem]{remark}
+        \declaretheorem[style=thmwhitebox, name=Exercise, sibling=theorem]{exercise}
+        % \declaretheorem[style=thmwhitelinebox, name=Remark, numbered=no]{remark*}
+    \else
+        \declaretheorem[style=thmbluebox, name=Theorem]{theorem}
+        \declaretheorem[style=thmbluebox, name=Corollary, sibling=theorem]{corollary}
+        \declaretheorem[style=thmbluebox, name=Proposition, sibling=theorem]{proposition}
+        \declaretheorem[style=thmredbox, name=Example, sibling=theorem]{example}
+        \declaretheorem[style=thesisblackbox, numbered=no, name=Motivating Question]{remark}
+        
+        \declaretheorem[style=thmblacklinebox, name=Lemma, sibling=theorem]{lemma}
+        \declaretheorem[style=thmblackbox, name=Problem, sibling=theorem]{problem}
+        % \declaretheorem[style=thmblacklinebox, name=Remark, sibling=theorem]{remark}
+        \declaretheorem[style=thmblackbox, name=Exercise, sibling=theorem]{exercise}
+        % \declaretheorem[style=thmblacklinebox, name=Remark, numbered=no]{remark*}
+    \fi
+
+    \theoremstyle{definition}
+    \newtheorem{definition}[theorem]{Definition}
+    \newtheorem{note}[theorem]{Note}

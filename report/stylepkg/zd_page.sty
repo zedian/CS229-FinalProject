@@ -1,0 +1,78 @@
+\ProvidesPackage{stylepkg/zd_page}
+
+%% Page Background
+\PassOptionsToPackage{usenames, svgnames, dvipsnames}{xcolor}
+\RequirePackage{xcolor}
+
+% \RequirePackage{titlesec}
+% \RequirePackage{phaistos}
+
+\ifzediblack
+    \pagecolor[rgb]{0,0,0}
+    \color[rgb]{1,1,1}
+    % \newcommand{\hsp}{\hspace{6pt}}
+    % \titleformat{\section}[hang]{\Huge\bfseries}{\hsp\color{White}{\PHplumedHead}\hsp}{0pt}{\Huge\bfseries}
+\else
+    % \newcommand{\hsp}{\hspace{6pt}}
+    % \titleformat{\section}[hang]{\Huge\bfseries}{\hsp\color{Black}{\PHplumedHead}\hsp}{0pt}{\Huge\bfseries}
+\fi
+
+%% Page Header and Footer
+% \RequirePackage{fancyhdr}
+% \RequirePackage{titling}
+% \pagestyle{fancy}
+% \fancyhf{}
+% \fancyhead[RE, LO]{\theauthor}
+
+% \ifdefined\headmark
+%     \fancyhead[LE, RO]{\thetitle (\headmark)}
+% \else
+%     \fancyhead[LE, RO]{\thetitle}
+% \fi
+
+\RequirePackage{titleps}
+\RequirePackage{titling}
+
+\newpagestyle{main}{
+    \sethead{Zedian Xiao}
+            {}
+            {\thetitle (\sectiontitle)}
+    \setheadrule{0.5pt}
+    \setfoot{}
+            {\thepage}
+            {}
+    \setfootrule{0.0pt}
+}
+
+\newpagestyle{twopage}{
+    \sethead[Zedian Xiao]
+            []
+            [\thetitle (\sectiontitle)]
+            {\theauthor}
+            {}
+            {\thetitle (\sectiontitle)}
+    \setheadrule{0.5pt}
+    \setfoot[]
+            [\thepage]
+            []
+            {}
+            {\thepage}
+            {}
+    \setfootrule{0.5pt}
+}
+
+\setlength{\headheight}{0.7in}
+\setlength{\oddsidemargin}{-0.3in}
+\setlength{\evensidemargin}{-0.3in}
+\setlength{\voffset}{-1.in}
+\setlength{\headsep}{10pt}
+\setlength{\textwidth}{7.in}
+\setlength{\textheight}{8.75in}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+\setlength{\footskip}{0.4in}
+
+\ifzedioneside
+    \pagestyle{main}
+\else
+    \pagestyle{twopage}
+\fi
